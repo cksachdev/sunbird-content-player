@@ -37,7 +37,7 @@ extract("C:/Users/anirban/Documents/diksha_data/ecml/ecml-do_2125910617140756481
                         fs.renameSync(finalFolder+"/"+file,contentName);
                      } */
 
-                })
+                }
         });
 
     function updateFixtureJson(folderName) {
@@ -50,11 +50,9 @@ extract("C:/Users/anirban/Documents/diksha_data/ecml/ecml-do_2125910617140756481
         fixtureJsonContent.result.content.push(fixtureObj);
     }
 
-
+    function objCopy(obj) {
+        return JSON.parse(JSON.stringify(obj));
+    }
     // var contentList =  fs.readFileSync("C:/Users/anirban/git/sunbird-content-player/player/app-data/fixture-content-list.json");
     // console.log(contentList);
-}
-
-function objCopy(obj) {
-    return JSON.parse(JSON.stringify(obj));
 }

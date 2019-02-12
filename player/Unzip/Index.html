@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QR Reverse verifier - Diksha</title>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+<body class="container-fluid">
+	<section class="container">
+		<div class="form-fieldset step1-fieldset">
+			<h2 class="text-center">Step 1: Drag & drop Files to extract QR Codes</h2>
+			<form class="form-container">
+				<div id="dragdropzone" class="dragdropzone" multiple>
+				</div>
+				<p class="validation-error">
+					Please select files
+				</p>
+				<div class="submit-btn-container">
+					<input type="button" class="btn upload-submit-btn submit-btn" value="Submit">
+				</div>
+				<div class="clearfix"></div>
+			</form>
+		</div>
+		
+				<div class="submit-btn-container">
+					<input type="button" class="btn reset-btn" value="Reset">
+					<a type="button" class="btn submit-pkg submit-btn" data-toggle="modal" data-target="#myModal">
+						Submit
+					</a>
+					<div class="modal fade" id="myModal" role="dialog">
+						<div class="modal-dialog">
+						
+						  <!-- Modal content-->
+						  <div class="modal-content">
+							<div class="modal-header confirm-modal-title">
+								<h5 class="modal-title ">Confirmation</h5>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+							<div class="modal-body">
+							  <p id="confirmationMsg"></p>
+							</div>
+							<div class="modal-footer">
+									<button type="button" class="btn  btn-default" data-dismiss="modal">Close</button>
+							  <button type="button" class="btn package-submit-btn btn-success">Confirm</button>
+							</div>
+						  </div>
+						  
+						</div>
+					  </div>
+
+				</div>
+				<div class="clearfix"></div>
+			</form>
+		</div>
+		<div class="form-fieldset step3-fieldset">
+			<h2 class="text-center">Result</h2>
+			<form class="form-container">
+				<div class="submit-btn-container" multiple>
+					<input type="button" class="btn reset-btn" value="New">
+					
+				</div>
+				<div class="clearfix"></div>
+			</form>
+		</div>
+	</section>
+	<section class="body-loading-overlay">
+		<div class="loading-text">Loading...</div>
+		<div class="loading-icon">
+			<img src="./images/loading.gif">
+		</div>
+	</section>
+	<section id="packetNameQR" style="display : none; font-weight: bold" aria-label="Packate Name :"></section>
+	<section id='QRVerifyDataTbl' style="display: none;">
+		<table class="table table-bordered">
+			<thead>
+			<td>Used Count</td>	
+			<td>Used Dials</td>	
+			<td>Unused Count</td>
+			<td>Unused Dials</td>
+			<td>Duplicate Count</td>
+			<td>Duplicate Dials</td>
+			<td>Additional Count</td>
+			<td>Additional Dials</td>	
+			<td>Additional Used From</td>
+							
+			</thead>
+			<!-- <tbody id="showQRVerifyData"> -->
+			<tbody>
+			<td id ="usedQrCodeCount"/>	
+			<td id ="usedQrCode"/>
+			<td id ="UnusedQrCodeCount"/>
+			<td id ="UnusedQrCode"/>
+			<td id ="DuplicateQrCodeCount"/>
+			<td id ="DuplicateQrCode"/>	
+			<td id ="AdtnlusedQrCodeCount"/>
+			<td id ="AdtnlusedQrCode"/>
+			<td id ="AdtnlusedQrCodeFrom"/>
+			</tbody>
+		  </table>
+		  <div class="submit-btn-container" style="display: none">
+				<input type="button" class="btn reset-btn" value="New">
+				<input type="button" class="btn result-submit-btn submit-btn" value="Open Result Folder">
+			</div>		  
+	</section>
+	
+	
+	<!-- Insert this line above script imports  -->
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+	<!-- normal script imports etc  -->
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/dropzone.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/select2.min.js"></script>
+	<script src="./js/scripts.js"></script>
+	<!-- Insert this line after script imports -->
+	<script>if (window.module) module = window.module;</script>
+</body>
+</html>

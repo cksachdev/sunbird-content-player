@@ -1,0 +1,30 @@
+{
+  "name": "unzip_electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "com.diksha.qrextractor.app",
+    "mac": {
+      "category": "extractor.tool"
+    }
+  },
+  "author": "Tarento",
+  "license": "ISC",
+  "dependencies": {
+    "extract-zip": "^1.6.7",
+    "jsqr": "^1.0.4",
+    "rimraf": "^2.6.2"
+  },
+  "devDependencies": {
+    "electron": "1.8.2",
+    "electron-builder": "^20.0.8",
+    "electron-packager": "^11.0.1"
+  }
+}

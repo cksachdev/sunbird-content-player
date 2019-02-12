@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QR Reverse verifier - Diksha</title>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+<body class="container-fluid">
+	<section class="container">
+		<div class="form-fieldset step1-fieldset">
+			<h2 class="text-center">Step 1: Drag & drop Zip to extract </h2>
+			<form class="form-container">
+				<div id="dragdropzone" class="dragdropzone" multiple>
+				</div>
+				<p class="validation-error">
+					Please select files
+				</p>
+				<div class="submit-btn-container">
+					<input type="button" class="btn upload-submit-btn submit-btn" value="Submit">
+				</div>
+				<div class="clearfix"></div>
+			</form>
+		</div>
+        	<!-- Insert this line above script imports  -->
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+	<!-- normal script imports etc  -->
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/dropzone.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/select2.min.js"></script>
+	<script src="./js/script.js"></script>
+	<!-- Insert this line after script imports -->
+	<script>if (window.module) module = window.module;</script>
+</body>
+</html>
